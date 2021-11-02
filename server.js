@@ -8,7 +8,6 @@ app.use(express.json());
 
 require("./routes/driverRoutes")(app);
 require("./routes/userRoutes")(app);
-require("./routes/vibesRoutes")(app);
 
 app.listen(PORT, () => {
   console.log(`App listening on PORT: ${PORT}`);
