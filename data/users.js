@@ -1,3 +1,4 @@
+const drivers = require("./driver");
 const vibes = require("./vibes");
 
 const users = [
@@ -10,6 +11,11 @@ const users = [
     vibes: {
       id: "Vapor",
       vibe: "Vaporwave Beats",
+    },
+    driver: {
+      assignedVehicle: drivers[0].vehicle,
+      assignedMake: drivers[0].vehicleMake,
+      assignedColor: drivers[0].vehicleColor,
     },
   },
   {
