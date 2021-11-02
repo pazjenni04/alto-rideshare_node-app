@@ -1,14 +1,14 @@
 const vibes = [
   {
-    id: "Vapor",
+    id: "1",
     vibe: "Vaporwave Beats",
   },
   {
-    id: "Quiet",
+    id: "2",
     vibe: "Quiet ride",
   },
   {
-    id: "Classic",
+    id: "3",
     vibe: "Classical music",
   },
 ];
