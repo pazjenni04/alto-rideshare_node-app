@@ -1,6 +1,3 @@
-//need to pull up driver's first name and description
-//need to pull up driver's car info - make/Alto number/color
-
 const driverData = require("../data/driver");
 const userData = require("../data/users");
 

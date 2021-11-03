@@ -1,10 +1,4 @@
-//need to pull up one user's trip info - pickup and dropoff info
-//need to pull up user's trip information with vibe attached
-//need to create time of arrival for user when pull up all information
-
-const { get } = require("http");
 const userData = require("../data/users");
-const vibesData = require("../data/vibes");
 
 module.exports = (app) => {
   //fetches and renders user's trip information
