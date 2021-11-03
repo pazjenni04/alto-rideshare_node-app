@@ -74,21 +74,12 @@ module.exports = (app) => {
   });
 
   //updates the vibe on user's profile
-  app.put("/api/user/vibe/:id", (req, res) => {
-    let found = userData.find(function (user) {
-      return user.id === req.params.id;
-    });
+  app.patch("/api/user/vibe/:id", async (req, res) => {
+    let vibe = userData.find((vibe) => vibe.id === parseInt(req.params.id));
+    if (!vibe) return res.status(404).json({ message: "Not Found" });
 
-    if (found) {
-      let updatedVibes = {
-        id: found.id,
-        carVibes: req.body.carVibes,
-      };
+    vibe.carVibes = req.body.carVibes;
 
-      let targetIndex = userData.indexOf(found);
-      userData.splice(targetIndex, 1, updatedVibes);
-      res.sendStatus(204);
-    }
-    res.sendStatus(404);
+    await res.json(vibe);
   });
 };

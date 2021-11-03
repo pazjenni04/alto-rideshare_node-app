@@ -3,7 +3,7 @@ const vibes = require("./vibes");
 
 const users = [
   {
-    id: "1",
+    id: 1,
     name: "Dwight Schrute",
     pickup: "4859 Bank St, Dallas, TX 75214",
     dropoff: "14251 Gaston Ave, Dallas, TX 75214",
@@ -20,7 +20,7 @@ const users = [
     },
   },
   {
-    id: "2",
+    id: 2,
     name: "Jim Halpert",
     pickup: "8495 Skillman, Dallas, TX 75215",
     dropoff: "7498 Barbary Lane, Fate, TX 75189",
@@ -37,7 +37,7 @@ const users = [
     },
   },
   {
-    id: "3",
+    id: 3,
     name: "Michael Scott",
     pickup: "400 Riverside, Dallas, TX 75215",
     dropoff: "4481 Dove Landing, Royse City, TX 75189",
