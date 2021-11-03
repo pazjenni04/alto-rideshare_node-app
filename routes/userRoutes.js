@@ -9,13 +9,26 @@ module.exports = (app) => {
 
     for (let i = 0; i < userData.length; i++) {
       if (user == userData[i].id) {
-        res.write("<h2>You Trip</h2>" + `<h1>${userData[i].arrival}</h1>`);
-        res.write(`<p>Estimated arrival at ${userData[i].dropoff}</p>`);
-        res.write(`<p>Estimated fare: ${userData[i].fare}</p>`);
+        res.write(
+          "<h2>Your Trip</h2>" + `<h1>${userData[i].estimated_arrival}</h1>`
+        );
+        res.write(
+          `<p>Estimated arrival at ${userData[i].dropoff.street1} ${userData[i].dropoff.street2}`
+        );
+        res.write(
+          `<p>Estimated fare: ${userData[i].fare_min} - ${userData[i].fare_max}</p>`
+        );
+        res.write(
+          `<p>Passengers: ${userData[i].passenger_min} - ${userData[i].passenger_max}</p>`
+        );
         res.write(`<p>Payment: ${userData[i].payment}</p>`);
-        res.write(`<p>Passengers: ${userData[i].passengers}</p>`);
-        res.write(`<h4>${userData[i].pickup}</h4>`);
-        res.write(`<h2>${userData[i].dropoff}</h2>`);
+        res.write(
+          `<h4>${userData[i].pickup.street1}${userData[i].pickup.street2} ${userData[i].pickup.city}, ${userData[i].pickup.state} ${userData[i].pickup.zip_code}</h4>`
+        );
+        res.write(
+          `<p>${userData[i].dropoff.street1}</p><p>${userData[i].dropoff.street2}</p><p>${userData[i].dropoff.city}, ${userData[i].dropoff.state} ${userData[i].dropoff.zip_code}</p>`
+        );
+        res.write(`<p>${userData[i].notes}</p>`);
       }
     }
     res.end();
@@ -41,7 +54,7 @@ module.exports = (app) => {
         res.write(
           "<h3>Color</h3>" + `<p>${userData[i].driver.assignedColor}</p>`
         );
-        res.write(`<h4>${userData[i].dropoff}</h4>`);
+        res.write(`<h4>${userData[i].dropoff.street1}</h4>`);
       }
     }
     res.end();
@@ -57,8 +70,10 @@ module.exports = (app) => {
 
     for (let i = 0; i < userData.length; i++) {
       if (user == userData[i].id) {
-        res.write("<h2>Your Trip<h2>" + `<h1>${userData[i].arrival}</h1>`);
-        res.write(`<p>Estimated arrival at ${userData[i].dropoff}</p>`);
+        res.write(
+          "<h2>Your Trip<h2>" + `<h1>${userData[i].estimated_arrival}</h1>`
+        );
+        res.write(`<p>Estimated arrival at ${userData[i].dropoff.street1}</p>`);
         res.write("<h4>Current Vibe</h4>" + `<p>${userData[i].carVibes}</p>`);
       }
     }
