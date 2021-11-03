@@ -9,7 +9,7 @@ const vibes = [
   },
   {
     id: "3",
-    vibe: "Classical music",
+    vibe: "Vaporwave Beats",
   },
 ];
 

@@ -4,7 +4,7 @@ const vibes = require("./vibes");
 const users = [
   {
     id: "1",
-    user: "Dwight Schrute",
+    name: "Dwight Schrute",
     pickup: "4859 Bank St, Dallas, TX 75214",
     dropoff: "14251 Gaston Ave, Dallas, TX 75214",
     arrival: "1:00pm",
@@ -12,10 +12,7 @@ const users = [
     phone: "469-222-5555",
     passengers: "1-5",
     payment: "Amex01",
-    vibes: {
-      id: "Vapor",
-      vibe: "Vaporwave Beats",
-    },
+    carVibes: vibes[0].vibe,
     driver: {
       assignedVehicle: drivers[0].vehicle,
       assignedMake: drivers[0].vehicleMake,
@@ -32,10 +29,7 @@ const users = [
     phone: "972-222-5487",
     passengers: "1-5",
     payment: "Amex03",
-    vibes: {
-      id: "Quiet",
-      vibe: "Quiet ride",
-    },
+    carVibes: vibes[1].vibe,
     driver: {
       assignedVehicle: drivers[1].vehicle,
       assignedMake: drivers[1].vehicleMake,
@@ -52,10 +46,7 @@ const users = [
     phone: "214-777-8457",
     passengers: "1-5",
     payment: "Amex02",
-    vibes: {
-      id: "Classic",
-      vibe: "Classical music",
-    },
+    carVibes: vibes[2].vibe,
     driver: {
       assignedVehicle: drivers[2].vehicle,
       assignedMake: drivers[2].vehicleMake,

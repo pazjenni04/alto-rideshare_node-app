@@ -2,6 +2,7 @@
 //need to pull up user's trip information with vibe attached
 //need to create time of arrival for user when pull up all information
 
+const { get } = require("http");
 const userData = require("../data/users");
 const vibesData = require("../data/vibes");
 
@@ -29,7 +30,7 @@ module.exports = (app) => {
   });
 
   //fetches and renders user's driver info
-  app.get("/api/user/driver/:id", (req, res) => {
+  app.get("/api/user/vehicle/:id", (req, res) => {
     const user = req.params.id;
 
     res.setHeader("Content-Type", "text/html");
@@ -64,7 +65,7 @@ module.exports = (app) => {
       if (user == userData[i].id) {
         res.write("<h2>Your Trip<h2>" + `<h1>${userData[i].arrival}</h1>`);
         res.write(`<p>Estimated arrival at ${userData[i].dropoff}</p>`);
-        res.write("<h4>Current Vibe</h4>" + `<p>${userData[i].vibes.vibe}</p>`);
+        res.write("<h4>Current Vibe</h4>" + `<p>${userData[i].carVibes}</p>`);
       }
     }
     res.end();
@@ -73,11 +74,21 @@ module.exports = (app) => {
   });
 
   //updates the vibe on user's profile
-  app.put("/api/user/vibe/:vibe", (req, res) => {
-    const vibeUpdate = req.body.vibe;
+  app.put("/api/user/vibe/:id", (req, res) => {
+    let found = userData.find(function (user) {
+      return user.id === req.params.id;
+    });
 
-    switch (vibeUpdate) {
-      case "1":
+    if (found) {
+      let updatedVibes = {
+        id: found.id,
+        carVibes: req.body.carVibes,
+      };
+
+      let targetIndex = userData.indexOf(found);
+      userData.splice(targetIndex, 1, updatedVibes);
+      res.sendStatus(204);
     }
+    res.sendStatus(404);
   });
 };
