@@ -32,7 +32,7 @@ To render a user's assigned driver's information, you can proceed with typing in
 
 By altering `/:id` at the end of the URL with one of the Alto user's ID, you can render the assigned driver to a specific Alto rider. For instance, if you type in `localhost:3001/api/drivers/1` into the URL or API Client, the following Alto user's assigned driver should render.
 
-![The following images shows the information that gets rendered onto the browser](images\driver-info.PNG)
+![The following images shows the information that gets rendered onto the browser](https://raw.githubusercontent.com/pazjenni04/alto-rideshare_node-app/main/images/driver-info.PNG)
 
 On this window, the Alto user's assigned driver info will render their name and some additional information. On this same window, the Alto user's destination address will remain displayed for them to see.
 
@@ -46,7 +46,7 @@ To render an Alto user's Trip information, you can proceed with typing in the fo
 
 Again, by altering the `/:id` at the end of the URL with one of the Alto user's ID, you can render the Alto user's trip information. For example, typing in `localhost:3001/api/user/trip/2` into the URL or API Client will render the following information
 
-![The following image shows the Alto user's trip information](images\trip-info.PNG)
+![The following image shows the Alto user's trip information](https://raw.githubusercontent.com/pazjenni04/alto-rideshare_node-app/main/images/trip-info.PNG)
 
 Displayed onto the page should include the Alto user's arrival time, destination address, their estimated fare, the payment type, the amount of passengers that can ride along, and their pickup location.
 
@@ -60,7 +60,7 @@ In order to render an Alto user's vehicle information, you can proceed with typi
 
 By altering the `/:id` at the end of the URL with one of the Alto user's ID, you can render the Alto user's vehicle information. For example, by typing in `localhost:3001/api/user/vehicle/3` into the URL or API Client, the following information should render
 
-![The following information displays the Alto user's vehicle information](images\vehicle-info.PNG)
+![The following information displays the Alto user's vehicle information](https://raw.githubusercontent.com/pazjenni04/alto-rideshare_node-app/main/images/vehicle-info.PNG)
 
 This process can be repeated with any user within the data folder under the users.js file by inserting their assigned ID.
 
@@ -72,7 +72,7 @@ At anytime, the Alto user can choose their vehicle's vibe. To have a more enjoya
 
 By updating the `:/id` at the end of the URL with one of the Alto user's ID, you can render the following screen
 
-![The following displays the current vibe in the Alto user's current trip](images\vibe-info.PNG)
+![The following displays the current vibe in the Alto user's current trip](https://raw.githubusercontent.com/pazjenni04/alto-rideshare_node-app/main/images/vibe-info.PNG)
 
 This process can be repeated with any user within the data folder under the users.js file by inserting their assigned ID.
 
