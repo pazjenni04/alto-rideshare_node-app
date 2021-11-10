@@ -2,7 +2,6 @@ const drivers = [
   {
     id: 1,
     name: "Steph",
-    image: "./images/Driver_photo.png",
     description:
       "Steph Festiculma is a graduate of Parsons New School in New York and fluent in Portugeuse, Spanish and English. Steph has been driving with Alto since 2018.",
     phone: "",
@@ -13,7 +12,6 @@ const drivers = [
   {
     id: 2,
     name: "Michael",
-    image: "../images/michael_photo.png",
     description:
       "Michael has been working for Alto since 2020.  He is currently undergoing a MBA degree at the Texas Woman's University.",
     phone: "214-000-8549",
@@ -24,7 +22,6 @@ const drivers = [
   {
     id: 3,
     name: "Tommy",
-    image: "../images/Driver_photo.png",
     description:
       "Tommy adament volunteer at the North Texas food bank.  Outside of driving for Alto, Tommy represents Alto actively in the community by volunteering at shelters and food pantries.",
     phone: "214-000-8549",
