@@ -1,14 +1,5 @@
 # alto-rideshare_node-app
 
-<details>
-<summary>Dropdown Heading</summary>
-<br>
-Choice 1
-<br> Choice 2
-<br> Choice 2
-<br>
-</details>
-
 ## **Description**
 
 The objective of this node application is to render an Alto Rideshare user's trip information, destination info, assigned driver, and the app user's assigned vehicle make/model. All these retreivals are created through rest API routes created through express library.
@@ -30,7 +21,7 @@ Once cloned, you can then proceed with downloading the following npm package by 
 
     npm install express
 
-This will allow the application to implement the necessary middleware, Express.js, in order to render the established routes. Once downloaded, proceed wtih typing in
+This will allow the application to implement the necessary middleware, Express.js, in order to render the established routes. Once downloaded, proceed with typing in the following to run the app locally
 
     npm run start
 
@@ -90,9 +81,11 @@ To update the user's vehicle vibe, a patch route was created to isolate and only
 
 In your preferred API Client, insert the above PATCH route and in json body, you can update the 'carVibes' within the data with the name of your preferred vibe station. This should return the user's data information as a whole and under the 'carVibes' property within the json data, the vibe station should be updated to the PATCH request. If you proceed with running the GET route for that same user, the new vibe should be displayed onto the page.
 
-## **Notes**
+## **Demo**
 
-- No front-end for application so was not able to render images
+![Demo](route-demo.gif)
+
+Github Link - https://github.com/pazjenni04/alto-rideshare_node-app.git
 
 ## **Questions**
 
@@ -100,10 +93,6 @@ _Questions? Feel free to contact me._
 
 - Via [Gtihub](https://github.com/pazjenni04)
 - Via [Email](pazjenni1331@gmail.com)
-
-# Links
-
-- Github link - https://github.com/pazjenni04/alto-rideshare_node-app.git
 
 # License
 
