@@ -5,11 +5,19 @@ const vibes = [
   },
   {
     id: 2,
-    vibe: "Quiet ride",
+    vibe: "Void",
   },
   {
     id: 3,
-    vibe: "Vaporwave Beats",
+    vibe: "Sanctuary",
+  },
+  {
+    id: 4,
+    vibe: "Liftoff",
+  },
+  {
+    id: 5,
+    vibe: "Fizz",
   },
 ];
 

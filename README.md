@@ -1,86 +1,98 @@
 # alto-rideshare_node-app
 
-## **Table of Contents**
-
-1. [Description](#description)
-2. [Usage](#usage)
-3. [Routes](#routes)
-4. [Technologies](#technologies)
-5. [Questions](#questions)
-6. [Link](#links)
-7. [License](#license)
+<details>
+<summary>Dropdown Heading</summary>
+<br>
+Choice 1
+<br> Choice 2
+<br> Choice 2
+<br>
+</details>
 
 ## **Description**
 
-The objective of this node application is to render an Alto Rideshare user's trip information, destination info, assigned driver, and the vehicle make/model assigned to them. All these retreivals are created through rest API routes created through the npm express library.
+The objective of this node application is to render an Alto Rideshare user's trip information, destination info, assigned driver, and the app user's assigned vehicle make/model. All these retreivals are created through rest API routes created through express library.
+
+## **How it's Built**
+
+- Used npm package Express.js to establish a server for the api routes
+- Routes were created to render information based on the Alto Rideshare user's data
+- Used mock data as endpoints
 
 ## **Usage**
 
-To use this application, you first need to clone the git repository https://github.com/pazjenni04/alto-rideshare_node-app.git. Once cloned, you can then proceed with downloading the following package by entering
+To utilize this application, first clone the following git repository
 
-`npm install express`
+    //enter this git clone into terminal
+    https://github.com/pazjenni04/alto-rideshare_node-app.git
 
-This will allow the application to implement the necessary middleware, Express.js, in order to render the established routes. Once downloaded, the user can then proceed with typing in the following routes into the URL or into their preferred API Client to render one of the user's assigned information.
+Once cloned, you can then proceed with downloading the following npm package by entering
+
+    npm install express
+
+This will allow the application to implement the necessary middleware, Express.js, in order to render the established routes. Once downloaded, proceed wtih typing in
+
+    npm run start
+
+or
+
+    node server.js
+
+into the terminal to start the server on localhost 3001 and then proceed with typing in the below routes into the URL or into your preferred API Client to render individual user's data.
 
 ## **Routes**
 
-### Assigned Driver
+### **_Assigned Driver_**
 
-To render a user's assigned driver's information, you can proceed with typing in the following either into the browser's URL or in your preferred API Client.
+To render a user's assigned driver's information, the following GET route was established. By typing in the following pathway to the browser's URL or in your preferred API Client
 
-`localhost:3001/api/drivers/:id`
+    localhost:3001/api/drivers/:id
 
-By altering `/:id` at the end of the URL with one of the Alto user's ID, you can render the assigned driver to a specific Alto rider. For instance, if you type in `localhost:3001/api/drivers/1` into the URL or API Client, the following Alto user's assigned driver should render.
-
-![The following images shows the information that gets rendered onto the browser](https://raw.githubusercontent.com/pazjenni04/alto-rideshare_node-app/main/images/driver-info.PNG)
+and altering the `/:id` at the end of the pathway with one of the Alto user's ID (mock data includes users attached to ids 1,2, or 3), you can render the assigned driver to a specific Alto rider.
 
 On this window, the Alto user's assigned driver info will render their name and some additional information. On this same window, the Alto user's destination address will remain displayed for them to see.
 
 This process can be repeated with any user within the data folder under the users.js file by inserting their assigned ID.
 
-### Trip Information
+### **_Trip Information_**
 
-To render an Alto user's Trip information, you can proceed with typing in the following into the browser's URL or in your preferred API Client.
+To render an Alto user's Trip information, the following GET route was created. Proceed with typing in the following into the browser's URL or in your preferred API Client
 
-`localhost:3001/api/user/trip/:id`
+    localhost:3001/api/user/trip/:id
 
-Again, by altering the `/:id` at the end of the URL with one of the Alto user's ID, you can render the Alto user's trip information. For example, typing in `localhost:3001/api/user/trip/2` into the URL or API Client will render the following information
-
-![The following image shows the Alto user's trip information](https://raw.githubusercontent.com/pazjenni04/alto-rideshare_node-app/main/images/trip-info.PNG)
+and altering the `/:id` at the end of the URL with one of the Alto user's ID (mock data includes users attached to id's 1,2, or 3).
 
 Displayed onto the page should include the Alto user's arrival time, destination address, their estimated fare, the payment type, the amount of passengers that can ride along, and their pickup location.
 
 This process can be repeated with any user within the data folder under the users.js file by inserting their assigned ID.
 
-### Vehicle Information
+### **_Vehicle Information_**
 
-In order to render an Alto user's vehicle information, you can proceed with typing in the following into the browser's URL or in your preferred API Client.
+To render an Alto user's vehicle information, the following GET route was created. Proceed with typing in the following into the browser's URL or in your preferred API Client
 
-`localhost:3001/api/user/vehicle/:id`
+    localhost:3001/api/user/vehicle/:id
 
-By altering the `/:id` at the end of the URL with one of the Alto user's ID, you can render the Alto user's vehicle information. For example, by typing in `localhost:3001/api/user/vehicle/3` into the URL or API Client, the following information should render
+and altering the `/:id` at the end of the URL with one of the Alto user's ID (mock data includes users attached to id's 1,2, or 3).
 
-![The following information displays the Alto user's vehicle information](https://raw.githubusercontent.com/pazjenni04/alto-rideshare_node-app/main/images/vehicle-info.PNG)
+This window should display the vehicle's information for the user - this will include the Alto number attached to the vehicle, the make/model, the vehicle's color, and the dropoff location.
 
-This process can be repeated with any user within the data folder under the users.js file by inserting their assigned ID.
+### **_Vibe Information_**
 
-### Vibe Information
+At anytime, the Alto user can choose their vehicle's vibe. To have a more enjoyable experience, Alto Rideshare allows its users to control their vehicle's vibe by choosing which music or sound atmosphere they would like to have during their trip. To render an Alto user's current vibe assigned to their vehicle, you can type the following GET route into the browser's URL or into your preferred API Client.
 
-At anytime, the Alto user can choose their vehicle's vibe. To have a more enjoyable experience, Alto Rideshare allows its users to control their vehicle's vibe by choosing which music or sound atmosphere they would like to have during their trip. To render an Alto user's current vibe assigned to their vehicle, you can type the following URL into the browser's URL or into your preferred API Client.
+    localhost:3001/api/user/vibe/:id
 
-`localhost:3001/api/user/vibe/:id`
+By updating the `:/id` at the end of the URL with one of the Alto user's ID (mock data includes users attached to id's 1,2, or 3), you can render the Alto user's current vibe in the vehicle along with the trip's estimated time of arrival and dropoff location.
 
-By updating the `:/id` at the end of the URL with one of the Alto user's ID, you can render the following screen
+To update the user's vehicle vibe, a patch route was created to isolate and only update the user's current vibe station.
 
-![The following displays the current vibe in the Alto user's current trip](https://raw.githubusercontent.com/pazjenni04/alto-rideshare_node-app/main/images/vibe-info.PNG)
+    localhost:3001/api/user/vibe/:id
 
-This process can be repeated with any user within the data folder under the users.js file by inserting their assigned ID.
+In your preferred API Client, insert the above PATCH route and in json body, you can update the 'carVibes' within the data with the name of your preferred vibe station. This should return the user's data information as a whole and under the 'carVibes' property within the json data, the vibe station should be updated to the PATCH request. If you proceed with running the GET route for that same user, the new vibe should be displayed onto the page.
 
-## **Technologies**
+## **Notes**
 
-- JavaScript
-- node.js
-- Express library
+- No front-end for application so was not able to render images
 
 ## **Questions**
 
