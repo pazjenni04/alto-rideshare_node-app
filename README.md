@@ -49,7 +49,7 @@ To render an Alto user's Trip information, the following GET route was created. 
 
     localhost:3001/api/user/trip/:id
 
-To render a specific user, please update the `/:id` at the end of the pathway with one of the Alto user's ID (mock data includes users attached to id's 1, 2, or 3).
+To render a specific user, please update the `/:id` at the end of the pathway with one of the Alto user's ID (mock data includes users attached to ids 1, 2, or 3).
 
 Displayed onto the page should include the Alto user's arrival time, destination address, their estimated fare, the payment type, the amount of passengers that can ride along, and their pickup location.
 
@@ -61,7 +61,7 @@ To render an Alto user's vehicle information, the following GET route was create
 
     localhost:3001/api/user/vehicle/:id
 
-To render a specific user, please update the `/:id` at the end of the pathway with one of the Alto user's ID (mock data includes users attached to id's 1, 2, or 3).
+To render a specific user, please update the `/:id` at the end of the pathway with one of the Alto user's ID (mock data includes users attached to ids 1, 2, or 3).
 
 This window should display the vehicle's information for the user - this will include the Alto number attached to the vehicle, the make/model, the vehicle's color, and the dropoff location.
 
@@ -71,7 +71,7 @@ At anytime, the Alto user can choose their vehicle's vibe. To have a more enjoya
 
     localhost:3001/api/user/vibe/:id
 
-By updating the `:/id` at the end of the pathway with one of the Alto user's ID (mock data includes users attached to id's 1, 2, or 3), you can render the Alto user's current vibe in the vehicle along with the trip's estimated time of arrival and dropoff location.
+By updating the `:/id` at the end of the pathway with one of the Alto user's ID (mock data includes users attached to ids 1, 2, or 3), you can render the Alto user's current vibe in the vehicle along with the trip's estimated time of arrival and dropoff location.
 
 To update the user's vehicle vibe, a patch route was created to isolate and only update the user's current vibe station.
 
