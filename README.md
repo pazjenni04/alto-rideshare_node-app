@@ -35,13 +35,11 @@ into the terminal to start the server on localhost 3001 and then proceed with ty
 
 ### **_Assigned Driver_**
 
-To render a user's assigned driver's information, the following GET route was established. By typing in the following pathway to the browser's URL or in your preferred API Client
+To render a user's assigned driver's information, the following GET route was established. Proceed with typing in the following pathway to either the browser's URL or in your preferred API Client
 
     localhost:3001/api/drivers/:id
 
-and altering the `/:id` at the end of the pathway with one of the Alto user's ID (mock data includes users attached to ids 1,2, or 3), you can render the assigned driver to a specific Alto rider.
-
-On this window, the Alto user's assigned driver info will render their name and some additional information. On this same window, the Alto user's destination address will remain displayed for them to see.
+To render a specific user, please update the `/:id` at the end of the pathway with one of the Alto user's ID (mock data includes users attached to ids 1, 2, or 3). After you have pressed enter, the window should display the Alto user's assigned driver info including the driver's name, a brief bio and will display the user's final dropoff destination as well.
 
 This process can be repeated with any user within the data folder under the users.js file by inserting their assigned ID.
 
@@ -51,7 +49,7 @@ To render an Alto user's Trip information, the following GET route was created. 
 
     localhost:3001/api/user/trip/:id
 
-and altering the `/:id` at the end of the URL with one of the Alto user's ID (mock data includes users attached to id's 1,2, or 3).
+To render a specific user, please update the `/:id` at the end of the pathway with one of the Alto user's ID (mock data includes users attached to id's 1, 2, or 3).
 
 Displayed onto the page should include the Alto user's arrival time, destination address, their estimated fare, the payment type, the amount of passengers that can ride along, and their pickup location.
 
@@ -63,7 +61,7 @@ To render an Alto user's vehicle information, the following GET route was create
 
     localhost:3001/api/user/vehicle/:id
 
-and altering the `/:id` at the end of the URL with one of the Alto user's ID (mock data includes users attached to id's 1,2, or 3).
+To render a specific user, please update the `/:id` at the end of the pathway with one of the Alto user's ID (mock data includes users attached to id's 1, 2, or 3).
 
 This window should display the vehicle's information for the user - this will include the Alto number attached to the vehicle, the make/model, the vehicle's color, and the dropoff location.
 
@@ -73,13 +71,13 @@ At anytime, the Alto user can choose their vehicle's vibe. To have a more enjoya
 
     localhost:3001/api/user/vibe/:id
 
-By updating the `:/id` at the end of the URL with one of the Alto user's ID (mock data includes users attached to id's 1,2, or 3), you can render the Alto user's current vibe in the vehicle along with the trip's estimated time of arrival and dropoff location.
+By updating the `:/id` at the end of the pathway with one of the Alto user's ID (mock data includes users attached to id's 1, 2, or 3), you can render the Alto user's current vibe in the vehicle along with the trip's estimated time of arrival and dropoff location.
 
 To update the user's vehicle vibe, a patch route was created to isolate and only update the user's current vibe station.
 
     localhost:3001/api/user/vibe/:id
 
-In your preferred API Client, insert the above PATCH route and in json body, you can update the 'carVibes' within the data with the name of your preferred vibe station. This should return the user's data information as a whole and under the 'carVibes' property within the json data, the vibe station should be updated to the PATCH request. If you proceed with running the GET route for that same user, the new vibe should be displayed onto the page.
+In your preferred API Client, insert the above PATCH route and in the json body, you can update the 'carVibes' within the data with the name of your preferred vibe station. This should return the user's data information as a whole and under the 'carVibes' property within the json data, the vibe station should be updated to the PATCH request. If you proceed with running the GET route for that same user, the new vibe should be displayed onto the page.
 
 ## **Demo**
 
