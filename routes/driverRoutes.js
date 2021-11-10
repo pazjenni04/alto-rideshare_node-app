@@ -11,8 +11,7 @@ module.exports = (app) => {
 
     for (let i = 0; i < driverData.length; i++) {
       if (driverId == driverData[i].id) {
-        res.sendFile(path.join(__dirname, "./images/Driver_photo.png"));
-        res.write("<h2> Your Driver</h2>" + `<h1>${driverData[i].name} </h1>`);
+        res.write("<h2>Your Driver</h2>" + `<h1>${driverData[i].name} </h1>`);
         res.write(`<p>${driverData[i].description}</p>`);
         res.write(`<h4>${userData[i].dropoff.street1}</h4>`);
       }
