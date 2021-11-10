@@ -21,7 +21,7 @@ Once cloned, you can then proceed with downloading the following npm package by 
 
     npm install express
 
-This will allow the application to implement the necessary middleware, Express.js, in order to render the established routes. Once downloaded, proceed with typing in the following to run the app locally
+This will allow the application install the necessary express library to run the server and render the established routes. Once downloaded, proceed with typing in the following to run the app locally
 
     npm run start
 
